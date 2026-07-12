@@ -5,14 +5,16 @@ namespace App\Http\Controllers\Api\Auth;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Api\Auth\LoginRequest;
 use App\Http\Resources\UserResource;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
+#[Group('Auth')]
 class LoginController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Login do usuário.
      */
     public function __invoke(LoginRequest $request): JsonResponse
     {

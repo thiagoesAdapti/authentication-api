@@ -4,14 +4,16 @@ namespace App\Http\Controllers\Api\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
+use Dedoc\Scramble\Attributes\Group;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Auth;
 
+#[Group('Auth')]
 class ProfileController extends Controller
 {
     /**
-     * Handle the incoming request.
+     * Perfil do usuário.
      */
     public function __invoke(): JsonResponse
     {
